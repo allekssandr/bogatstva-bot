@@ -6,7 +6,7 @@ const BOT = new TelegramApi(TOKEN, { polling: true })
 
 BOT.onText(/\/start/, (msg) => {
 
-    bot.sendMessage(msg.chat.id, "Welcome", {
+    BOT.sendMessage(msg.chat.id, "Welcome", {
         "reply_markup": {
             "keyboard": [[{text: 'Купить курс', callback_data: '/buy'}]]
         }
