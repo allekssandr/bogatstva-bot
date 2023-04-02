@@ -11,5 +11,8 @@ BOT.on('message', async (msg) => {
     const chatId = msg.chat.id
 
     if (text === '/start')
-        await BOT.sendMessage(chatId, 'Hi')
+        await BOT.sendMessage(chatId, 'Привет')
+
+    if (text === '/info')
+        await BOT.sendMessage(chatId, 'Ты скоро станешь богатым')
 })
