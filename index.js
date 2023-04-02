@@ -14,5 +14,5 @@ BOT.on('message', async (msg) => {
         await BOT.sendMessage(chatId, 'Привет')
 
     if (text === '/info')
-        await BOT.sendMessage(chatId, 'Ты скоро станешь богатым')
+        await BOT.sendMessage(chatId, 'Ты не станешь богатым')
 })
