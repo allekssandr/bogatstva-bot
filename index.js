@@ -4,15 +4,12 @@ const TOKEN = '6266713445:AAFHzjq8Ls-oxvfpdVKXPnGq53MoCDCJdWo'
 
 const BOT = new TelegramApi(TOKEN, { polling: true })
 
-BOT.on('message', async (msg) => {
-    await console.log(msg)
+BOT.onText(/\/start/, (msg) => {
 
-    const text = msg.text
-    const chatId = msg.chat.id
+    bot.sendMessage(msg.chat.id, "Welcome", {
+        "reply_markup": {
+            "keyboard": [[{text: 'Купить курс', callback_data: '/buy'}]]
+        }
+    });
 
-    if (text === '/start')
-        await BOT.sendMessage(chatId, 'Привет')
-
-    if (text === '/info')
-        await BOT.sendMessage(chatId, 'Ты не станешь богатым')
-})
+});
